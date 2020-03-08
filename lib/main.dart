@@ -5,7 +5,9 @@ import './case2.dart'as case2;
 
 void main(){
   runApp(new MaterialApp(
+
     home:  new application(),
+    debugShowCheckedModeBanner:false,
   ));
 }
 class application extends StatefulWidget {
@@ -44,6 +46,7 @@ class _applicationState extends State<application> with SingleTickerProviderStat
           ,children:<Widget>[
             new case1.case1(),
             new case2.case2(),
+
 
 
 

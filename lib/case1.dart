@@ -1,9 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import './red1.dart'as red1;
-import './green1.dart'as green1;
-import './blue1.dart'as blue1;
-import './yellow1.dart'as yellow1;
+
 
 
 class case1 extends StatefulWidget {
@@ -12,7 +9,10 @@ class case1 extends StatefulWidget {
 }
 
 class _case1State extends State<case1> with SingleTickerProviderStateMixin {
-
+  bool pressRED=false;
+  bool pressGREEN=false;
+  bool pressBLUE=false;
+  bool pressYELLOW=false;
 
 
   @override
@@ -36,9 +36,7 @@ class _case1State extends State<case1> with SingleTickerProviderStateMixin {
                 height:60.0,
                 child:new RaisedButton(
                   onPressed:()
-                {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>red1.red()));
-                  },
+                  => setState(() => pressRED = !pressRED),color:pressRED ?Colors.red : Colors.grey,
                   child: new Text('RED'),) ,
 
               ),
@@ -48,21 +46,24 @@ class _case1State extends State<case1> with SingleTickerProviderStateMixin {
 
                 minWidth: 300.0,
                 height:60.0,
-                child:new RaisedButton(onPressed:(){Navigator.push(context, MaterialPageRoute(builder: (context)=>green1.green()));},child: new Text('GREEN'),) ,
+                child:new RaisedButton(onPressed:() => setState(() => pressGREEN = !pressGREEN),color:pressGREEN ?Colors.green : Colors.grey,
+                  child: new Text('GREEN'),) ,
 
               ),
               new ButtonTheme(
                 buttonColor: Colors.grey,
                 minWidth: 300.0,
                 height:60.0,
-                child:new RaisedButton(onPressed:(){Navigator.push(context, MaterialPageRoute(builder: (context)=>blue1.blue()));},child: new Text('BLUE'),) ,
+                child:new RaisedButton(onPressed:()=> setState(() => pressBLUE = !pressBLUE),color:pressBLUE ?Colors.blue : Colors.grey,
+                  child: new Text('BLUE'),) ,
 
               ),
               new ButtonTheme(
                 buttonColor: Colors.grey,
                 minWidth: 300.0,
                 height:60.0,
-                child:new RaisedButton(onPressed:(){Navigator.push(context, MaterialPageRoute(builder: (context)=>yellow1.yellow()));},child: new Text('YELLOW'),) ,
+                child:new RaisedButton(onPressed:()=> setState(() => pressYELLOW = !pressYELLOW),color:pressYELLOW ?Colors.yellow : Colors.grey,
+                  child: new Text('YELLOW'),) ,
 
               )
 

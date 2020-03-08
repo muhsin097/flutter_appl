@@ -32,7 +32,7 @@ class _case2State extends State<case2> {
                       buttonColor: Colors.grey,
                       minWidth: 100.0,
                       height:60.0,
-                      child: new RaisedButton(onPressed:(){Navigator.push(context, MaterialPageRoute(builder: (context)=>red.red())); }, child: new Text('RED'), color: Colors.grey,),
+                      child: new RaisedButton(onPressed:(){Navigator.push(context, MaterialPageRoute(builder: (context)=>red.red())); }, child: new Text('RED'), color: Colors.grey,)
                     ),
 
                     new ButtonTheme(
