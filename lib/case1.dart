@@ -22,7 +22,7 @@ class _case1State extends State<case1> with SingleTickerProviderStateMixin {
 
       home: new Scaffold(
         appBar: AppBar(
-          title: Text('CASE 1'),
+          title: Text('CASE 1 is here'),
         ),
 
         body:
